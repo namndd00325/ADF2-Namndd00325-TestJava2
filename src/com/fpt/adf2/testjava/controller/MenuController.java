@@ -59,10 +59,11 @@ public class MenuController {
     }
 
     public void editPassenger() {
-        while (true) {
-            for (Passenger passenger : listPassenger) {
 
-                System.out.println("Please enter reservation ID that you want to edit:");
+        for (Passenger passenger : listPassenger) {
+
+            System.out.println("Please enter reservation ID that you want to edit:");
+            while (true) {
                 String strId = scanner.nextLine();
                 int id;
 
@@ -90,6 +91,7 @@ public class MenuController {
                         passenger.setPhone(phone);
                         passenger.setDateOfDeparture_Return(date);
                         listPassenger.add(passenger);
+                        break;
                     } else {
                         System.err.println("Not data! Please enter ID: ");
                     }
@@ -98,8 +100,8 @@ public class MenuController {
                     System.err.println("Please enter number: ");
                     continue;
                 }
-
             }
+
         }
 
     }
